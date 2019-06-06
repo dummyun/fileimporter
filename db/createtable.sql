@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS mydb.Files (
+  file_id INT NOT NULL AUTO_INCREMENT,
+  local_name VARCHAR(512) NOT NULL,
+  remote_name VARCHAR(512) NOT NULL,
+  size INT NULL,
+  start_download DATETIME NOT NULL,
+  end_download DATETIME NOT NULL,
+  UNIQUE INDEX id_UNIQUE (file_id ASC) VISIBLE,
+  PRIMARY KEY (local_name))
+ENGINE = InnoDB;
+ALTER TABLE mydb.files AUTO_INCREMENT=1001;
